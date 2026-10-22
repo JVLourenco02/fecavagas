@@ -1,0 +1,187 @@
+/* 1. CORES OFICIAIS DA FACULDADE (VARIÁVEIS) */
+:root {
+  --azul: #00529b;
+  --verde: #22b573;
+  --fundo: #f8fafc;
+  --escuro: #0f172a;
+  --borda: #e2e8f0;
+}
+
+/* 2. CONFIGURAÇÕES GERAIS DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--fundo);
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 3. CABEÇALHO */
+.topo {
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--borda);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--azul);
+}
+
+.logo span {
+  color: var(--verde);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ESTILO BASE DOS BOTÕES */
+.btn-primario, .btn-secundario {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background: var(--verde);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-secundario {
+  border: 2px solid var(--azul);
+  color: var(--azul);
+}
+
+/* 4. ÁREA DE BUSCA (HERO) */
+.hero {
+  background: var(--azul);
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.busca-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.busca-form input, .busca-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* 5. CONTAINER DAS SEÇÕES */
+.modulos, .vagas-destaque, .rodape-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid-vagas, .modulos, .rodape-conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.modulos, .vagas-destaque {
+  padding: 40px 20px;
+}
+
+/* CARD PADRÃO PARA MÓDULOS E VAGAS */
+.card-modulo, .card-vaga {
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.card-modulo {
+  border-top: 4px solid var(--azul);
+}
+
+.card-modulo h2, .vagas-destaque h2 {
+  color: var(--azul);
+  margin-bottom: 10px;
+}
+
+/* DETALHES DAS VAGAS */
+.tag {
+  background: #e6f7f0;
+  color: var(--verde);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.btn-detalhes {
+  display: block;
+  text-align: center;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  padding: 8px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: var(--azul);
+  font-weight: bold;
+}
+
+/* 6. RODAPÉ */
+.rodape {
+  background: var(--escuro);
+  color: #94a3b8;
+  padding: 40px 20px 20px;
+  border-top: 4px solid var(--verde);
+}
+
+.rodape-info h3, .rodape-nav h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.rodape-info h3 span {
+  color: var(--verde);
+}
+
+.rodape-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape-nav a:hover {
+  color: var(--verde);
+}
+
+.rodape-copyright {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #1e293b;
+  font-size: 0.85rem;
+}
