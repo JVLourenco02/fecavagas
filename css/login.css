@@ -1,0 +1,73 @@
+/* --- TELA DE LOGIN --- */
+.login-secao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: calc(100vh - 200px); /* Garante que o card fique centralizado na tela */
+}
+
+.login-card {
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--azul); /* Borda superior azul idêntica aos outros cards */
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-card h2 {
+  color: var(--azul);
+}
+
+.login-subtitulo {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.login-card label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--azul);
+}
+
+.login-card input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--borda);
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: var(--verde); /* Destaque verde ao clicar no campo */
+}
+
+.link-esqueci {
+  font-size: 0.85rem;
+  color: var(--azul);
+  align-self: flex-end; /* Alinha o link à direita */
+  margin-top: -4px;
+}
+
+.btn-entrar {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cadastro-prompt {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid var(--borda);
+}
+
+.cadastro-prompt a, .link-esqueci:hover {
+  color: var(--verde);
+  font-weight: bold;
+}

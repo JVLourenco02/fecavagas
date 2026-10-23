@@ -1,0 +1,73 @@
+/* ESTILOS EXCLUSIVOS DA HOME */
+.hero {
+  background: var(--azul);
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.busca-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.busca-form input, .busca-form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modulos, .vagas-destaque {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.grid-vagas, .modulos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-modulo, .card-vaga {
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.card-modulo {
+  border-top: 4px solid var(--azul);
+}
+
+.card-modulo h2, .vagas-destaque h2 {
+  color: var(--azul);
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #e6f7f0;
+  color: var(--verde);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.btn-detalhes {
+  display: block;
+  text-align: center;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  padding: 8px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: var(--azul);
+  font-weight: bold;
+}
