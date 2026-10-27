@@ -1,117 +1,189 @@
-/* 1. VARIÁVEIS E REGRAS GERAIS */
+/* FecaVagas — estilos globais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --azul: #00529b;
-  --verde: #22b573;
-  --fundo: #f8fafc;
+  --azul: #12345a;
+  --azul-acao: #2563eb;
+  --azul-acao-hover: #1d4ed8;
+  --verde: #10b981;
+  --verde-claro: #d1fae5;
+  --fundo: #f3f6fb;
+  --superficie: #ffffff;
   --escuro: #0f172a;
+  --texto: #334155;
+  --texto-suave: #64748b;
   --borda: #e2e8f0;
+  --sombra-card: 0 12px 32px rgba(15, 23, 42, 0.06);
+  --raio: 16px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--fundo);
-  color: #1e293b;
-  line-height: 1.5;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+a { color: inherit; text-decoration: none; }
+
+button, input, select { font: inherit; }
+
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
 }
 
-/* 2. CABEÇALHO */
+/* Cabeçalho */
 .topo {
-  background: #ffffff;
-  padding: 15px 40px;
+  min-height: 76px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 16px clamp(20px, 5vw, 72px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--borda);
+  gap: 24px;
+  border-bottom: 1px solid var(--borda);
+  position: relative;
+  z-index: 5;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.55rem;
+  letter-spacing: -0.07em;
+  font-weight: 800;
   color: var(--azul);
+  white-space: nowrap;
 }
 
-.logo span {
-  color: var(--verde);
-}
+.logo span { color: var(--azul-acao); }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: flex-end;
+  gap: clamp(12px, 2vw, 28px);
 }
 
-/* 3. BOTÕES GLOBAIS */
+.menu > a:not(.btn-primario):not(.btn-secundario) {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+  transition: color 160ms ease;
+}
+
+.menu > a:not(.btn-primario):not(.btn-secundario):hover { color: var(--azul-acao); }
+
+/* Botões */
 .btn-primario, .btn-secundario {
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
 }
 
 .btn-primario {
-  background: var(--verde);
-  color: #ffffff;
-  border: none;
+  background: var(--azul-acao);
+  color: #fff;
+  border: 1px solid var(--azul-acao);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.16);
+}
+
+.btn-primario:hover {
+  background: var(--azul-acao-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
 }
 
 .btn-secundario {
-  border: 2px solid var(--azul);
+  border: 1px solid #cbd5e1;
   color: var(--azul);
+  background: #fff;
 }
 
-/* 4. RODAPÉ */
+.btn-secundario:hover { background: #f8fafc; border-color: #94a3b8; }
+
+/* Rodapé */
 .rodape {
-  background: var(--escuro);
-  color: #94a3b8;
-  padding: 40px 20px 20px;
+  margin-top: 40px;
+  background: #0b1f38;
+  color: #aab8ca;
+  padding: 48px clamp(20px, 5vw, 72px) 20px;
   border-top: 4px solid var(--verde);
 }
 
 .rodape-conteudo {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  max-width: 1100px;
+  gap: 36px;
+  max-width: 1180px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
+.rodape-info { max-width: 310px; }
+
 .rodape-info h3, .rodape-nav h4 {
-  color: #ffffff;
-  margin-bottom: 10px;
+  color: #fff;
+  margin-bottom: 12px;
 }
 
-.rodape-info h3 span {
-  color: var(--verde);
+.rodape-info h3 {
+  font-size: 1.35rem;
+  letter-spacing: -0.05em;
 }
 
-.rodape-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.rodape-info h3 span { color: #34d399; }
+
+.rodape-info p { color: #aab8ca; font-size: 0.92rem; }
+
+.rodape-nav { display: flex; flex-direction: column; gap: 9px; }
+
+.rodape-nav h4 { font-size: 0.92rem; }
+
+.rodape-nav a {
+  font-size: 0.88rem;
+  color: #aab8ca;
+  transition: color 160ms ease;
 }
 
-.rodape-nav a:hover {
-  color: var(--verde);
-}
+.rodape-nav a:hover { color: #6ee7b7; }
 
 .rodape-copyright {
+  max-width: 1180px;
   text-align: center;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid #1e293b;
-  font-size: 0.85rem;
+  margin: 34px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(203, 213, 225, 0.16);
+  font-size: 0.82rem;
+  color: #8293a9;
+}
+
+@media (max-width: 760px) {
+  .topo { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .menu { width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 10px 16px; }
+  .menu > a:not(.btn-primario):not(.btn-secundario) { font-size: 0.86rem; }
+  .rodape-conteudo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rodape-info { grid-column: 1 / -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }

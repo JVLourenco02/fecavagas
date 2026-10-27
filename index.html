@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +24,13 @@
 
         <!-- SEÇÃO HERO / ÁREA DE BUSCA -->
         <section class="hero">
-            <h1>Sua carreira começa aqui.</h1>
-            <p>Conectamos estudantes às melhores vagas de estágio e programas de trainee.</p>
+            <span class="hero-etiqueta">FECA VAGAS · TALENTOS EM FORMAÇÃO</span>
+            <h1>Sua carreira em tecnologia<br><span>começa aqui.</span></h1>
+            <p>Encontre estágios em desenvolvimento, dados e tecnologia e dê o próximo passo na sua trajetória profissional.</p>
       
-            <form class="busca-form">
-                <input type="text" placeholder="Cargo, área ou tecnologia..." required>
-                <select>
+            <form class="busca-form" id="form-busca">
+                <input id="termo-busca" type="search" aria-label="Buscar vagas por cargo, área ou tecnologia" placeholder="Cargo, área ou tecnologia...">
+                <select id="filtro-modalidade" aria-label="Filtrar por modalidade">
                     <option value="">Todas as modalidades</option>
                     <option value="remoto">Remoto</option>
                     <option value="presencial">Presencial</option>
@@ -40,7 +41,7 @@
         </section>
 
     <!-- ATALHOS PARA OS DIVERSOS MÓDULOS -->
-        <section class="modulos">
+        <section class="modulos" aria-label="Acesso rápido">
             <article class="card-modulo">
                 <h2>Área do Candidato</h2>
                 <p>Acompanhe seus processos seletivos, atualize seu currículo e faça testes on-line.</p>
@@ -61,10 +62,17 @@
         </section>
 
 
-        <section class="vagas-destaque">
-            <h2>Vagas Recentes</h2>
+        <section class="vagas-destaque" id="vagas">
+            <div class="secao-cabecalho">
+                <div>
+                    <span class="sobretitulo">OPORTUNIDADES PARA COMEÇAR</span>
+                    <h2>Vagas recentes</h2>
+                </div>
+                <a href="#vagas" class="link-acao">Explorar oportunidades <span aria-hidden="true">&rarr;</span></a>
+            </div>
       
-            <section class="grid-vagas">
+            <p id="mensagem-busca" class="mensagem-busca" role="status" aria-live="polite"></p>
+            <section class="grid-vagas" id="lista-vagas">
                 <article class="card-vaga">
                     <span class="tag">Estágio</span>
                     <h3>Desenvolvedor Frontend Trainee</h3>
@@ -75,17 +83,17 @@
 
                 <article class="card-vaga">
                     <span class="tag">Estágio</span>
-                    <h3>Assistente de Marketing Digital</h3>
-                    <p class="empresa">Agência Mídia • Híbrido</p>
-                    <p class="requisitos">Criação de conteúdo, redes sociais e apoio em campanhas.</p>
+                    <h3>Estágio em Desenvolvimento Back-end</h3>
+                    <p class="empresa">Nexa Tecnologia <span aria-hidden="true">•</span> Híbrido</p>
+                    <p class="requisitos">Lógica de programação, APIs REST e noções de Java ou C#.</p>
                     <a href="#" class="btn-detalhes">Candidatar-se</a>
                 </article>
 
                 <article class="card-vaga">
                     <span class="tag">Trainee</span>
-                    <h3>Análise de Dados & BI</h3>
-                    <p class="empresa">DataCorp • Presencial</p>
-                    <p class="requisitos">Excel avançado, raciocínio lógico e noções de SQL.</p>
+                    <h3>Estágio em Análise de Dados</h3>
+                    <p class="empresa">DataCorp <span aria-hidden="true">•</span> Presencial</p>
+                    <p class="requisitos">SQL, planilhas e interesse em transformar dados em soluções.</p>
                     <a href="#" class="btn-detalhes">Candidatar-se</a>
                 </article>
             </section>
@@ -121,5 +129,6 @@
         <p class="rodape-copyright">&copy; 2026 Fecavagas. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/busca.js"></script>
 </body>
 </html>
