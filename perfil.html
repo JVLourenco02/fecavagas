@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fecavagas | Perfil do Candidato</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="topo">
+    <a href="index.html" class="logo">Feca<span>vagas</span></a>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="#">Vagas</a>
+      <a href="perfil.html" class="btn-secundario">Meu Perfil</a>
+    </nav>
+  </header>
+
+  <!-- ÁREA DO PERFIL / DASHBOARD -->
+  <main class="perfil-container">
+    
+    <!-- MENU LATERAL DE ABAS -->
+    <aside class="perfil-menu">
+      <header class="usuario-resumo">
+        <div class="avatar">JS</div>
+        <h3>João Silva</h3>
+        <p>Análise e Dev. de Sistemas</p>
+      </header>
+
+      <nav class="abas-nav">
+        <a href="#dados" class="aba-link ativa">Dados Pessoais</a>
+        <a href="#curriculo" class="aba-link">Meu Currículo</a>
+        <a href="#processos" class="aba-link">Meus Processos Seletivos</a>
+        <a href="#agenda" class="aba-link">Agenda</a>
+        <a href="#mensagens" class="aba-link">Mensagens</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO DAS ABAS -->
+    <section class="perfil-conteudo">
+
+      <!-- ABA: DADOS PESSOAIS -->
+      <article id="dados" class="painel-card">
+        <header class="secao-cabecalho">
+          <div>
+            <span class="sobretitulo">CONFIGURAÇÕES</span>
+            <h2>Dados Pessoais</h2>
+          </div>
+        </header>
+
+        <form class="form-perfil">
+          <label>
+            Nome Completo
+            <input type="text" value="João Silva" required>
+          </label>
+
+          <label>
+            E-mail
+            <input type="email" value="joao.silva@aluno.unifecaf.edu.br" required>
+          </label>
+
+          <label>
+            Telefone / WhatsApp
+            <input type="tel" value="(11) 99999-9999">
+          </label>
+
+          <label>
+            Curso na UniFECAF
+            <input type="text" value="Análise e Desenvolvimento de Sistemas">
+          </label>
+
+          <button type="submit" class="btn-primario">Salvar Alterações</button>
+        </form>
+      </article>
+
+      <!-- ABA: MEU CURRÍCULO -->
+      <article id="curriculo" class="painel-card">
+        <header class="secao-cabecalho">
+          <div>
+            <span class="sobretitulo">DOCUMENTAÇÃO</span>
+            <h2>Meu Currículo</h2>
+          </div>
+        </header>
+        
+        <p class="requisitos">Mantenha suas competências e histórico de experiências atualizados para ser recomendado aos recrutadores.</p>
+        
+        <form class="form-perfil">
+          <label>
+            Resumo Profissional
+            <textarea rows="4" placeholder="Fale brevemente sobre suas habilidades e objetivos de carreira..."></textarea>
+          </label>
+
+          <label>
+            Competências e Tecnologias
+            <input type="text" placeholder="Ex: HTML, CSS, JavaScript, Git, SQL">
+          </label>
+
+          <button type="submit" class="btn-primario">Atualizar Currículo</button>
+        </form>
+      </article>
+
+      <!-- ABA: MEUS PROCESSOS SELETIVOS -->
+      <article id="processos" class="painel-card">
+        <header class="secao-cabecalho">
+          <div>
+            <span class="sobretitulo">ACOMPANHAMENTO</span>
+            <h2>Meus Processos Seletivos</h2>
+          </div>
+        </header>
+
+        <section class="lista-processos">
+          <article class="card-vaga">
+            <span class="tag">Em Análise</span>
+            <h3>Desenvolvedor Frontend Trainee</h3>
+            <p class="empresa">Tech Solutions • Remoto</p>
+            <p class="requisitos">Candidatura enviada em 12/03. Aguardando avaliação de currículo.</p>
+          </article>
+
+          <article class="card-vaga">
+            <span class="tag">Entrevista Marcada</span>
+            <h3>Estágio em Suporte Técnico</h3>
+            <p class="empresa">DataCorp • Presencial</p>
+            <p class="requisitos">Entrevista online agendada para o dia 28/03 às 14h.</p>
+          </article>
+        </section>
+      </article>
+
+      <!-- ABA: AGENDA -->
+      <article id="agenda" class="painel-card">
+        <header class="secao-cabecalho">
+          <div>
+            <span class="sobretitulo">COMPROMISSOS</span>
+            <h2>Agenda</h2>
+          </div>
+        </header>
+
+        <section class="lista-agenda">
+          <article class="card-vaga">
+            <span class="tag">Prazo Teste</span>
+            <h3>Teste Lógico - DataCorp</h3>
+            <p class="requisitos">Prazo limite para conclusão: 25/03 às 23:59.</p>
+          </article>
+        </section>
+      </article>
+
+      <!-- ABA: MENSAGENS -->
+      <article id="mensagens" class="painel-card">
+        <header class="secao-cabecalho">
+          <div>
+            <span class="sobretitulo">COMUNICAÇÃO</span>
+            <h2>Mensagens</h2>
+          </div>
+        </header>
+
+        <section class="lista-mensagens">
+          <article class="card-vaga">
+            <h3>Recrutamento Tech Solutions</h3>
+            <p class="requisitos">Olá João! Seu perfil foi selecionado para a próxima etapa do processo seletivo.</p>
+          </article>
+        </section>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p class="rodape-copyright">&copy; 2026 Fecavagas. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
